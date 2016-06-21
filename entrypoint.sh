@@ -9,5 +9,4 @@ until glide install '\l'; do
   sleep 1
 done
 
->&2 echo "Git source is ready! - executing command"
 exec $cmd
