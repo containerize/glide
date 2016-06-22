@@ -4,7 +4,7 @@ set -e
 
 gocmd="$@"
 
-until $gocmd '\l'; do
+until glide install && exec $gocmd; do
   >&2 echo "Git source not ready yet!"
   sleep 1
 done
