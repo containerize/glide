@@ -8,7 +8,7 @@ fi
 
 if [ "${1:0:2}" = 'go' ]; then
   
-  until glide install '\l'; do
+  until glide update '\l'; do
     >&2 echo "Git Resource unavaliable!"
     sleep 1
   done
