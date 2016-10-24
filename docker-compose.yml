@@ -1,0 +1,5 @@
+server:
+  image: docker pull dockerepo/glide
+  tty: true
+  command: bash
+  

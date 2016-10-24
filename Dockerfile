@@ -1,9 +1,6 @@
-FROM golang
+FROM golang:1.7-alpine
 
 RUN go get github.com/Masterminds/glide
 
-ADD entrypoint.sh /go/bin/
-RUN chmod +x /go/bin/entrypoint.sh
-
-ENTRYPOINT ["entrypoint.sh"]
-CMD ["sh"]
+ENTRYPOINT ["glide"]
+CMD ["-v"]
