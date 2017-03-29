@@ -1,10 +1,7 @@
-FROM golang:1.7-alpine
+FROM golang:1.8-alpine
 
-MAINTAINER llitfkitfk <llitfkitfk@gmail.com> 
-
-RUN apk add --no-cache git
-
-RUN go get github.com/Masterminds/glide
+RUN apk add --no-cache git curl \
+    && curl https://glide.sh/get | sh
 
 ENTRYPOINT ["glide"]
 CMD ["-v"]
